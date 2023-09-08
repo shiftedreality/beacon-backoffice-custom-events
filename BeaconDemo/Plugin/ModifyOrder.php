@@ -19,6 +19,7 @@ class ModifyOrder
 
         foreach ($items as $item) {
             $item->setAdditionalData(
+                // This is the custom data for custom attributes
                 json_encode(['my' => 'data'])
             );
         }
