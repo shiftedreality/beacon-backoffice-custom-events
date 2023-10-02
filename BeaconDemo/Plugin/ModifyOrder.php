@@ -26,6 +26,7 @@ class ModifyOrder
 
         $payment = $order->getPayment();
 
+        // Order level
         if ($payment) {
             $payment->setAdditionalInformation('my', 'order_level');
             $order->setPayment($payment);
