@@ -24,6 +24,13 @@ class ModifyOrder
             );
         }
 
+        $payment = $order->getPayment();
+
+        if ($payment) {
+            $payment->setAdditionalInformation('my', 'order_level');
+            $order->setPayment($payment);
+        }
+
         $order->setItems($items);
     }
 }
