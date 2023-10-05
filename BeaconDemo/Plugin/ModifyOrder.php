@@ -20,7 +20,7 @@ class ModifyOrder
         foreach ($items as $item) {
             $item->setAdditionalData(
                 // This is the custom data for custom attributes
-                json_encode(['my' => 'data'])
+                json_encode(['order_line_item1' => 'Order line item value 1'])
             );
         }
 
@@ -28,7 +28,7 @@ class ModifyOrder
 
         // Order level
         if ($payment) {
-            $payment->setAdditionalInformation('my', 'order_level');
+            $payment->setAdditionalInformation('order_item1', 'Order item 1');
             $order->setPayment($payment);
         }
 
