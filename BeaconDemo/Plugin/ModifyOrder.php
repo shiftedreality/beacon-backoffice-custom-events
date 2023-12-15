@@ -19,7 +19,7 @@ class ModifyOrder
 
         foreach ($items as $item) {
             $item->setAdditionalData(
-                // This is the custom data for custom attributes
+                // This is the data for custom attributes on *order line item*
                 json_encode(['order_line_item1' => 'Order line item value 1'])
             );
         }
